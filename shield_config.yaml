@@ -1,0 +1,31 @@
+server:
+  upstream: "http://localhost:3000"
+  port: 8080
+security:
+  rate_limit:
+    window_sec: 60
+    max_requests_per_ip: 120
+  rate_limit_data:
+    window_sec: 60
+    max_requests_per_ip: 10
+  js_challenge:
+    enabled: true
+    cookie: "__ss_ch"
+    ttl_sec: 3600
+  honeypot:
+    enabled: true
+    path: "/__hp__"
+  blocked_agents:
+    - "python-requests"
+    - "scrapy"
+    - "curl"
+    - "wget"
+    - "Go-http-client"
+  blocked_paths:
+    - "/wp-admin"
+    - "/.env"
+    - "/phpinfo"
+    - "/.git"
+logging:
+  enabled: true
+  file: "/srv/novastack/shield/shield_logs.jsonl"
