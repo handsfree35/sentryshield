@@ -1,5 +1,5 @@
 # SentryShield
-
+![SentryShield](banner.png)
 **Lightweight WAF and reverse proxy with bot protection, built with FastAPI.**
 
 SentryShield er en lettvekts Web Application Firewall (WAF) og reverse proxy bygget med FastAPI. Designet for å beskytte e-handelsplattformer mot uønsket scraping, bots og angrep.
